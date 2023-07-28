@@ -19,10 +19,10 @@ public class ShirtController {
     @Autowired
     public ApiService apiService;
 
-    @GetMapping("/")
-    public List<Shirt> getAllShirt() {
-        return apiService.getAllShirt();
-    }
+    // @GetMapping("/")
+    // public List<Shirt> getAllShirt() {
+    //     return apiService.getAllShirt();
+    // }
 
     @GetMapping("/{shirtId}")
     public Shirt getOneShirt(@PathVariable int shirtId) {
@@ -34,10 +34,10 @@ public class ShirtController {
         return apiService.addNewShirt(shirt);
     }
 
-    @PutMapping("/{shirtId}")
-    public Shirt updateShirt(@RequestBody Shirt shirt, @PathVariable int shirtId) {
-        return apiService.updateShirt(shirt, shirtId);
-    }
+    // @PutMapping("/{shirtId}")
+    // public Shirt updateShirt(@RequestBody Shirt shirt, @PathVariable int shirtId) {
+    //     return apiService.updateShirt(shirt, shirtId);
+    // }
 
     @DeleteMapping("/{shirtId}")
     public boolean deleteOneShirt(@PathVariable int shirtId) {
